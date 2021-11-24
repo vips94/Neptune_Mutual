@@ -1,12 +1,13 @@
 import classes from './WalletPopup.module.scss';
 import React, { useEffect, useState } from 'react';
 import {IoClose} from "react-icons/io5";
-import { useWeb3React} from "@web3-react/core"
-import { injected } from "./Wallet/Connectors"
+import { useWeb3React} from "@web3-react/core";
+import { injected } from "./Wallet/Connectors";
+
 
 const WalletPopup = (props)=>{
 
-const { active, account, chainId, library, connector, activate, deactivate } = useWeb3React()
+const { active, account, chainId, library, activate, deactivate } = useWeb3React()
 
 
   async function connect() {
@@ -19,7 +20,7 @@ const { active, account, chainId, library, connector, activate, deactivate } = u
   }
 
   useEffect(() => {
-    if (account && library?.eth) {
+      if (account && library?.eth) {
         library?.eth.getBalance(account)
         .then((balance) => {
             setBalance(balance)
@@ -28,7 +29,7 @@ const { active, account, chainId, library, connector, activate, deactivate } = u
             setBalance(null)
         })
     }
-  }, [library])
+  }, [library,account])
 
   async function disconnect() {
     try {
@@ -44,8 +45,8 @@ const { active, account, chainId, library, connector, activate, deactivate } = u
     const [errorMessage , setErrorMessage] = useState(`Wallet not connected. Please click "Connect" button below.`)
 
     return(
-        <div className={classes.walletPopup}>
-            <div className={classes.walletPopup__content}>
+        <div className={classes.walletPopup} onClick={props.onCancelHandler}>
+            <div className={classes.walletPopup__content} onClick={(event)=>event.stopPropagation()}>
                 <div className={classes.walletPopup__content__header}>
                     <h2>Wallet Detail</h2>
                     <IoClose onClick={props.onCancelHandler}/>
