@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Neptune_Mutual/static/css/main.01afe440.chunk.css",
-    "main.js": "/Neptune_Mutual/static/js/main.d12cf315.chunk.js",
-    "main.js.map": "/Neptune_Mutual/static/js/main.d12cf315.chunk.js.map",
+    "main.js": "/Neptune_Mutual/static/js/main.5e9569db.chunk.js",
+    "main.js.map": "/Neptune_Mutual/static/js/main.5e9569db.chunk.js.map",
     "runtime-main.js": "/Neptune_Mutual/static/js/runtime-main.013ab127.js",
     "runtime-main.js.map": "/Neptune_Mutual/static/js/runtime-main.013ab127.js.map",
     "static/js/2.1b5b22ec.chunk.js": "/Neptune_Mutual/static/js/2.1b5b22ec.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.013ab127.js",
     "static/js/2.1b5b22ec.chunk.js",
     "static/css/main.01afe440.chunk.css",
-    "static/js/main.d12cf315.chunk.js"
+    "static/js/main.5e9569db.chunk.js"
   ]
 }
